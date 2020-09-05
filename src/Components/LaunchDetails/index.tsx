@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useLaunchDetailsQuery } from "../../generated/graphql";
 import LaunchDetails from "./LaunchDetails";
 
@@ -10,9 +10,10 @@ function LaunchDetailContainer({ id }: OwnProps) {
   const { data, loading, error, refetch } = useLaunchDetailsQuery({
     variables: { id: String(id) },
   });
-  React.useEffect(() => {
+
+  useEffect(() => {
     refetch();
-  }, [id]);
+  }, [id, refetch]);
 
   if (error) return <div>there was an error</div>;
   if (loading) return <div>Loading.....</div>;
