@@ -1,0 +1,32 @@
+.detailcontainer {
+  height: 80vh;
+  margin: 40px;
+  overflow: hidden auto;
+  color: #fff;
+}
+
+.detail {
+  max-width: 75%;
+  margin: 20px;
+}
+.images {
+  margin: 20px;
+}
+.table {
+  overflow-x: auto;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+}
+
+@media only screen and (max-width: 800px) {
+  .detail {
+    min-width: 100%;
+  }
+  .detailcontainer {
+    margin: 20px;
+  }
+}

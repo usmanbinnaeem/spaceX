@@ -1,0 +1,44 @@
+.ship-container {
+  background-image: url(https://www.flametree.global/wp-content/uploads/2019/02/spacexrocketreturn.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.inner__shipcontainer {
+  margin: 0 40px 40px 40px;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  width: 30%;
+}
+
+td {
+  width: 70%;
+}
+
+/* tr:nth-child(even) {
+  background-color: #333333;
+  color: #ffffff;
+}
+tr:nth-child(odd) {
+  background-color: #a8a2a2;
+} */
+
+@media only screen and (max-width: 600px) {
+  .inner__container {
+    padding: 40px 20px 0 20px;
+  }
+}

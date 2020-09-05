@@ -1,0 +1,19 @@
+.container {
+  height: 80vh;
+  margin-top: 40px;
+  overflow: hidden auto;
+}
+
+.orderlist {
+  list-style: none;
+}
+
+.listitem {
+  padding: 10px;
+  border: 1px solid #000;
+  color: rgb(238, 228, 228);
+}
+
+.listitem:hover {
+  cursor: pointer;
+}

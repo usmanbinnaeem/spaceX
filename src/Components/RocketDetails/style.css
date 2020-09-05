@@ -1,0 +1,36 @@
+.rocket-container {
+  background-image: url(https://www.createdigital.org.au/wp-content/uploads/2019/01/Gilmour-Space-Technologies-new-funding-for-domestic-launches-3-700x481.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.inner__container {
+  padding: 0 40px 40px 40px;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  width: 30%;
+}
+
+td {
+  width: 70%;
+}
+
+@media only screen and (max-width: 600px) {
+  .inner__container {
+    padding: 40px 20px 0 20px;
+  }
+}
