@@ -2,6 +2,7 @@ import React from "react";
 import Launches from "./Components/Launches";
 import LaunchDetails from "./Components/LaunchDetails";
 import LandingPage from "./Components/Landing/LandingPage";
+// import Chart from "./Components/chart";
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import "./App.css";
@@ -38,6 +39,7 @@ const Display = () => {
           </Grid>
         </Grid>
       </div>
+      {/* <Chart /> */}
     </div>
   );
 };

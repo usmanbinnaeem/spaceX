@@ -13,7 +13,11 @@ const LaunchListContainer = (props: OwnProps) => {
     return <div>ERROR</div>;
   }
 
-  return <Launches data={data} {...props} />;
+  return (
+    <>
+      <Launches data={data} {...props} />
+    </>
+  );
 };
 
 export default LaunchListContainer;

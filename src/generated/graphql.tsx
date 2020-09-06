@@ -1386,6 +1386,17 @@ export type RocketsListQuery = (
   )>>> }
 );
 
+export type SuccessLaunchesQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type SuccessLaunchesQuery = (
+  { __typename?: 'Query' }
+  & { launches?: Maybe<Array<Maybe<(
+    { __typename?: 'Launch' }
+    & Pick<Launch, 'launch_success'>
+  )>>> }
+);
+
 
 export const LaunchDetailsDocument = gql`
     query LaunchDetails($id: ID!) {
@@ -1555,3 +1566,35 @@ export function useRocketsListLazyQuery(baseOptions?: Apollo.LazyQueryHookOption
 export type RocketsListQueryHookResult = ReturnType<typeof useRocketsListQuery>;
 export type RocketsListLazyQueryHookResult = ReturnType<typeof useRocketsListLazyQuery>;
 export type RocketsListQueryResult = Apollo.QueryResult<RocketsListQuery, RocketsListQueryVariables>;
+export const SuccessLaunchesDocument = gql`
+    query successLaunches {
+  launches {
+    launch_success
+  }
+}
+    `;
+
+/**
+ * __useSuccessLaunchesQuery__
+ *
+ * To run a query within a React component, call `useSuccessLaunchesQuery` and pass it any options that fit your needs.
+ * When your component renders, `useSuccessLaunchesQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useSuccessLaunchesQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useSuccessLaunchesQuery(baseOptions?: Apollo.QueryHookOptions<SuccessLaunchesQuery, SuccessLaunchesQueryVariables>) {
+        return Apollo.useQuery<SuccessLaunchesQuery, SuccessLaunchesQueryVariables>(SuccessLaunchesDocument, baseOptions);
+      }
+export function useSuccessLaunchesLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<SuccessLaunchesQuery, SuccessLaunchesQueryVariables>) {
+          return Apollo.useLazyQuery<SuccessLaunchesQuery, SuccessLaunchesQueryVariables>(SuccessLaunchesDocument, baseOptions);
+        }
+export type SuccessLaunchesQueryHookResult = ReturnType<typeof useSuccessLaunchesQuery>;
+export type SuccessLaunchesLazyQueryHookResult = ReturnType<typeof useSuccessLaunchesLazyQuery>;
+export type SuccessLaunchesQueryResult = Apollo.QueryResult<SuccessLaunchesQuery, SuccessLaunchesQueryVariables>;
